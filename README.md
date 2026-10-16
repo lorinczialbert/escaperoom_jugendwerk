@@ -51,16 +51,16 @@ Im GM-Panel (zusätzlich zu den Item-Schaltern):
 
 | Programmpunkt | Code |
 |---|---|
-| Anmeldung | 3KR7V |
-| Bibelarbeit (BA1–BA5) | 9TQM4 |
-| MA Besprechung | 5XNP8 |
-| Singen | 7BHD2 |
-| Wasserspiele | 4WGZ6 |
-| Geländespiel | 8FRJ5 |
-| Wanderung | 2MVT9 |
-| Essen | 6PLC3 |
-| Stockbrot | 5DYQ7 |
-| Lagerfeuer | 9HKB4 |
+| Anmeldung | 48351 |
+| Bibelarbeit (BA1–BA5) | 4914 |
+| MA Besprechung | TEAMER |
+| Singen | LIEDDD |
+| Wasserspiele | QUELLE |
+| Geländespiel | PDFROSENAU |
+| Wanderung | BERGWANDERER |
+| Essen | 527 |
+| Stockbrot | STBRT |
+| Lagerfeuer | HOLZ |
 
 Eingabe ist nicht case-sensitiv, Leerzeichen/Bindestriche werden ignoriert.
 
