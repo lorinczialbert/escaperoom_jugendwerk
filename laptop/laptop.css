@@ -1,0 +1,55 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; background: #0d1117; color: #e6edf3; overflow: hidden;
+  font-family: Roboto, Arial, sans-serif; user-select: none; }
+#wrap { height: 100%; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 34px; }
+
+h1 { font-size: clamp(28px, 4.5vw, 58px); letter-spacing: 10px; font-weight: 300; }
+
+#code { width: min(620px, 78vw); font-size: clamp(40px, 7vw, 88px); text-align: center;
+  letter-spacing: 16px; text-transform: uppercase; padding: 18px 10px;
+  background: #161b22; color: #e6edf3; border: 3px solid #30363d; border-radius: 14px;
+  outline: none; caret-color: #58a6ff; }
+#code:focus { border-color: #58a6ff; }
+#code.bad { border-color: #f85149; animation: shake .38s; }
+#code.good { border-color: #3fb950; }
+@keyframes shake { 25% { transform: translateX(-14px) } 75% { transform: translateX(14px) } }
+
+button.enter { font-size: 30px; letter-spacing: 6px; padding: 16px 64px; border: 0;
+  border-radius: 12px; background: #238636; color: #fff; cursor: pointer; }
+button.enter:disabled { background: #30363d; color: #8b949e; cursor: default; }
+
+#msg { min-height: 52px; font-size: 34px; letter-spacing: 5px; font-weight: 700; }
+#msg.bad { color: #f85149; } #msg.good { color: #3fb950; } #msg.info { color: #d29922; }
+
+#statusbar { position: fixed; bottom: 22px; display: flex; gap: 20px; align-items: center;
+  font-size: 17px; color: #6e7681; letter-spacing: 2px; }
+#timer { font-variant-numeric: tabular-nums; }
+#timer.warn { color: #d29922; }
+#timer.critical { color: #f85149; }
+
+/* lost screen: replaces the code-entry UI once time runs out */
+#lostScreen { position: fixed; inset: 0; background: #1a0000; color: #ffb4b4; display: none;
+  flex-direction: column; align-items: center; justify-content: center; gap: 16px; text-align: center; }
+#lostScreen.show { display: flex; }
+#lostScreen h1 { font-size: 54px; letter-spacing: 4px; font-weight: 800; }
+#lostScreen p { font-size: 20px; color: #ffd8d8; }
+
+/* game master */
+#gm { position: fixed; inset: 0; background: rgba(2,6,12,.96); display: none;
+  padding: 38px; overflow: auto; }
+#gm.show { display: block; }
+#gm h2 { font-size: 20px; margin-bottom: 16px; letter-spacing: 3px; color: #8b949e; }
+#gmlist { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.gmrow { display: flex; justify-content: space-between; align-items: center; gap: 10px;
+  background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 10px 14px; font-size: 15px; }
+.gmrow .code { color: #6e7681; font-family: monospace; }
+.gmrow button { border: 0; border-radius: 6px; padding: 7px 14px; cursor: pointer; font-size: 13px; }
+.on { background: #3fb950; color: #06210d; } .off { background: #30363d; color: #c9d1d9; }
+#gmbar { margin: 22px 0; display: flex; gap: 10px; flex-wrap: wrap; }
+#gmbar button { background: #21262d; color: #e6edf3; border: 1px solid #30363d;
+  border-radius: 8px; padding: 11px 18px; cursor: pointer; font-size: 14px; }
+#gmpw { font-size: 20px; padding: 12px 18px; width: 260px; background: #161b22;
+  color: #e6edf3; border: 2px solid #30363d; border-radius: 8px; outline: none; }
+#gmpw:focus { border-color: #58a6ff; }
+#gmerr { color: #f85149; font-size: 14px; min-height: 20px; margin-top: 8px; }

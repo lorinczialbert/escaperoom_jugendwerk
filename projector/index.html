@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Tagesplan</title>
+<link rel="stylesheet" href="sheet.css">
+</head>
+<body>
+  <div id="blackout"></div>
+
+  <div id="story">
+    <div class="inner">
+      <h1 id="storyTitle"></h1>
+      <div id="storyText"></div>
+      <div class="instruction" id="storyInstruction"></div>
+    </div>
+  </div>
+
+  <div id="stage"><div id="sheet"></div></div>
+  <div id="banner"></div>
+  <div id="progress"><span id="ptext"></span><div id="dots"></div></div>
+  <div id="timer"></div>
+  <div id="penaltyFlash">&minus;1 MINUTE</div>
+  <div id="finale">TAGESPLAN KOMPLETT!</div>
+
+  <div id="lost">
+    <h1>ZEIT ABGELAUFEN</h1>
+    <p>Die Gruppe hat es leider nicht rechtzeitig geschafft.</p>
+  </div>
+
+  <script src="../data/config.js"></script>
+  <script src="../data/items.js"></script>
+  <script src="../data/schedule.js"></script>
+  <script src="../data/story.js"></script>
+  <script src="../core/game.js"></script>
+  <script src="../core/bus.js"></script>
+  <script src="projector.js"></script>
+</body>
+</html>

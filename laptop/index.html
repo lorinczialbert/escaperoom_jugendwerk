@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Code</title>
+<link rel="stylesheet" href="laptop.css">
+</head>
+<body>
+  <div id="wrap">
+    <h1>CODE EINGEBEN</h1>
+    <input id="code" maxlength="12" autocomplete="off" spellcheck="false">
+    <button id="enter" class="enter">ENTER</button>
+    <div id="msg"></div>
+  </div>
+  <div id="statusbar">
+    <span id="count"></span>
+    <span id="timer"></span>
+  </div>
+
+  <div id="lostScreen">
+    <h1>VERLOREN</h1>
+    <p>Die Zeit ist abgelaufen.</p>
+  </div>
+
+   <div id="gm">
+    <h2>GAME MASTER</h2>
+    <div id="gmgate">
+      <input id="gmpw" type="password" placeholder="Passwort" autocomplete="off">
+      <div id="gmerr"></div>
+    </div>
+    <div id="gmbody" style="display:none">
+    <div id="gmbar">
+      <button data-action="unlockAll">Alles freischalten</button>
+      <button data-action="reset">Spiel zurücksetzen</button>
+      <button data-action="swapDisplays">Bildschirme tauschen</button>
+      <button data-action="showBlackout">Introbildschirm zeigen</button>
+      <button data-action="showStory">Story-Bildschirm zeigen</button>
+      <button data-action="skipIntro">Intro überspringen (Timer starten)</button>
+      <button data-action="minusMinute">&minus;1 Minute (Test)</button>
+      <button data-action="testLose">Fast vorbei (10 Sek, Test)</button>
+      <button onclick="document.getElementById('gm').classList.remove('show')">Schließen (Esc)</button>
+    </div>
+        <div id="gmlist"></div>
+    </div>
+  </div>
+
+  <script src="../data/config.js"></script>
+  <script src="../data/items.js"></script>
+  <script src="../core/game.js"></script>
+  <script src="../core/bus.js"></script>
+  <script src="laptop.js"></script>
+</body>
+</html>

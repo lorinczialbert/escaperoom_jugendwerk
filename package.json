@@ -1,0 +1,23 @@
+{
+  "name": "tagesplan-escape",
+  "version": "1.0.0",
+  "description": "Escape-room Tagesplan: Laptop code entry + projector timetable",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "browser": "npx --yes serve -l 5050 .",
+    "build:win": "npx --yes electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^31.7.7"
+  },
+  "build": {
+    "appId": "camp.tagesplan.escape",
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "portable"
+    }
+  }
+}
